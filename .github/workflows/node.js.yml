@@ -26,4 +26,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: ls
+    - run: docker container run -it -v /tmp:/tmp -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/containers:/var/lib/docker/containers:ro -e ACCOUNT_UUID={39a37132-017b-446b-99ad-010d9f4f7e1f} -e REPOSITORY_UUID={0eb930ca-4096-499a-954d-b0734b2efc2e} -e RUNNER_UUID={42f4e54d-4c60-5a93-b522-56ed1518112e} -e OAUTH_CLIENT_ID=U6bMaA8lK5BU0TqzUULlCdjGoDKGFvY5 -e OAUTH_CLIENT_SECRET=bSf_C6gAGqPl0t3hxULsiHrP7TKrmDrBULzFILuVqCjxHfsJdN1jEzj14pyE-gxn -e WORKING_DIRECTORY=/tmp --name runner docker-public.packages.atlassian.com/sox/atlassian/bitbucket-pipelines-runner
