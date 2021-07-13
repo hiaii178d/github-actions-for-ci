@@ -1,6 +1,5 @@
 #!/bin/bash
 sudo apt update
-sudo apt upgrade -y
 sudo swapon -sv
 sudo swapoff -av
 sudo sysctl -n vm.swappiness
